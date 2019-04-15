@@ -1,5 +1,5 @@
 var app = require('express').createServer();
-/***
+
 var fibonacci = function(n, callback) {
     var inner = function(n1, n2, i) {
         if (i > n) {
@@ -21,7 +21,7 @@ var fibonacci = function(n, callback) {
 
 /*** For reference, and to save you looking at the revision history,
  *   this is the previous implementation.
-*/
+
 var async = require('async');
 var fibonacci = function(n, callback) {
     if (n <= 2) {
@@ -40,7 +40,7 @@ var fibonacci = function(n, callback) {
     });
 }
 fibonacci = async.memoize(fibonacci);
-
+*/
 
 app.get('/:n', function(req, res) {
     fibonacci(req.params.n, function(err, number) {
