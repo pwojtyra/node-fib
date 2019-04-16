@@ -14,12 +14,12 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express":"2.4.x",
-    "async":"2.6.x",
+    "express":"4.16.x",
     "fibonacci":"1.6.x",
     "node-static": "0.7.x",
     "socket.io": "2.2.x",
-    "mime-types": "2.1.x"
+    "mime-types": "2.1.x",
+    "mime": "2.4.x"
   },
   "devDependencies": {}
 }
