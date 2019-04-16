@@ -17,8 +17,9 @@
     "express":"2.4.x",
     "async":"2.6.x",
     "fibonacci":"1.6.x",
-    "node-static": "0.7.10",
-    "socket.io": "1.2.0" 
+    "node-static": "0.7.x",
+    "socket.io": "2.2.x",
+    "mime-types": "2.1.x"
   },
   "devDependencies": {}
 }
