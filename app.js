@@ -17,7 +17,8 @@ http.createServer('/:n', function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     fib(req.params.n, function(number) {
         console.log (number);
-        res.end(number);
+        res.write(number);
+        res.end()
     });
     
-  }).listen(8080);
+  }).listen(server_port);
