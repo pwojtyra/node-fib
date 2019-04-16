@@ -9,19 +9,8 @@ var fib = function(n) {
     const fibonacci = require ('fibonacci');
     const bigNumber = fibonacci.iterate (n);
     console.log (bigNumber);
-    callback (bigNumber);
-    return;
+    return bigNumber;
 }
-
-http.createServer('/:n', function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    fib(req.params.n, function(number) {
-        console.log (number);
-        res.write(number);
-        res.end()
-    });
-    
-  }).listen(server_port);
 
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
