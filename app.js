@@ -1,4 +1,3 @@
-//var app = require('express').createServer();
 var express = require('express');
 var app = express();
 
@@ -14,8 +13,9 @@ var fib = function(n, callback) {
 
 app.get('/:n', function(req, res) {
 
-    fib(req.params.n, function(number) { 
-        res.send(''+number);
+    fib(req.params.n, function(number) {
+        console.log (number);
+        res.send(number);
     });
 });
 
