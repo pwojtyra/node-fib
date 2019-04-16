@@ -1,5 +1,5 @@
 var app = require('express').createServer();
-
+/***
 var fibonacci = function(n, callback) {
     var inner = function(n1, n2, i) {
         if (i > n) {
@@ -41,9 +41,17 @@ var fibonacci = function(n, callback) {
 }
 fibonacci = async.memoize(fibonacci);
 */
+var fib = function(n, callback) {
+
+    const fibonacci = require ('fibonacci');
+    const binNumber = fibonacci.iterate (n);
+    callback (null, binNumber)
+    return;
+}
 
 app.get('/:n', function(req, res) {
-    fibonacci(req.params.n, function(err, number) {
+/*    fibonacci(req.params.n, function(err, number) { */
+    fib(req.params.n, function(err, number) { 
         res.send(''+number);
     });
 });
