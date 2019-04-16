@@ -1,4 +1,6 @@
-var app = require('express').createServer();
+//var app = require('express').createServer();
+var express = require('express');
+var app = express();
 
 var fib = function(n, callback) {
 
@@ -6,13 +8,13 @@ var fib = function(n, callback) {
     const fibonacci = require ('fibonacci');
     const bigNumber = fibonacci.iterate (n);
     console.log (bigNumber);
-    callback (null, bigNumber);
+    callback (bigNumber);
     return;
 }
 
 app.get('/:n', function(req, res) {
 
-    fib(req.params.n, function(err, number) { 
+    fib(req.params.n, function(number) { 
         res.send(''+number);
     });
 });
