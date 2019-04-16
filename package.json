@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "express":"4.16.x",
-    "fibonacci":"1.6.x"
+    "fibonacci":"1.6.x",
+    "http":"11.14.x"
   },
   "devDependencies": {}
 }
