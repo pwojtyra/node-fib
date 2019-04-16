@@ -9,7 +9,7 @@ var fib = function(n, callback) {
 }
 
 app.get('/:n', function(req, res) {
-/*    fibonacci(req.params.n, function(err, number) { */
+    
     fib(req.params.n, function(err, number) { 
         res.send(''+number);
     });
